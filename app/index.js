@@ -1,13 +1,15 @@
 import React from 'react';
 import { render } from 'react-dom';
 import './styles';
-import Header from './components/header/Header';
+import Header from './components/Header/Header';
+import Main from './components/Main/Main';
 
 
 const App = () => {
   return (
     <section>
       <Header />
+      <Main />
     </section>
   );
 }
