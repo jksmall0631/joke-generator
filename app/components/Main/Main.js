@@ -22,7 +22,7 @@ export default class Main extends Component{
 
   render(){
     return(
-      <h1>{this.state.joke}</h1>
+      <p>{this.state.joke}</p>
     )
   }
 }

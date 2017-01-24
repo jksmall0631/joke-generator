@@ -3,7 +3,7 @@ import './button-style';
 
 const Button = (props) => {
   return (
-    <button id='settings' onClick={() => props.handleClick()}>Click Me</button>
+    <button id='settings' onClick={() => props.handleClick()}>Settings</button>
   );
 }
 
