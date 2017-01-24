@@ -4,17 +4,25 @@ export default class Main extends Component{
   constructor(){
     super();
     this.state = {
-      jokes: '',
+      joke: '',
     }
   }
 
-  // componentDidMount(){
-  //
-  // }
+  componentDidMount(){
+    fetch('http://api.icndb.com/jokes/random')
+      .then((stuff) => stuff.json())
+      .then((moreStuff) => this.APIScrubber(moreStuff.value.joke))
+      .then((moreMoreStuff) => this.setState({joke: moreMoreStuff}));
+  }
+
+  APIScrubber(api){
+    let scrubbed = api.replace(/&quot;/g, '"');
+    return scrubbed;
+  }
 
   render(){
     return(
-      <h1>bla</h1>
+      <h1>{this.state.joke}</h1>
     )
   }
 }
