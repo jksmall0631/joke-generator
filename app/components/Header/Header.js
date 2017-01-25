@@ -1,6 +1,5 @@
 import React from 'react';
 import './header-style';
-
 import Button from '../Button/Button';
 
 const logStuff = () => {
@@ -11,7 +10,10 @@ const Header = () => {
   return (
     <div className="header">
       <h1>Chuck Norris Joke Machine</h1>
-      <Button handleClick={() => logStuff()} />
+      <Button
+        style='settings'
+        name='settings'
+        handleClick={() => logStuff()} />
     </div>
   );
 }

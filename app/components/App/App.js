@@ -1,14 +1,15 @@
 import React from 'react';
-import {Route, Router, browserHistory} from 'react';
 import Header from '../Header/Header';
-import Main from '../Main/Main';
+import Joke from '../Joke/Joke';
 
-
-const App = () => {
+const App = (props) => {
   return (
     <section>
       <Header />
-      <Main />
+      <Joke />
+      <div>
+        {props.children}
+      </div>
     </section>
   );
 }

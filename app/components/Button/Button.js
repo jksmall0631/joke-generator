@@ -1,9 +1,9 @@
 import React from 'react';
 import './button-style';
 
-const Button = (props) => {
+const Button = ({style, name, handleClick}) => {
   return (
-    <button id='settings' onClick={() => props.handleClick()}>Settings</button>
+    <button className={style} onClick={() => handleClick()}>{name}</button>
   );
 }
 
