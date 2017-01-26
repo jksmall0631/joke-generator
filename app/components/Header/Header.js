@@ -3,10 +3,6 @@ import './header-style';
 import Button from '../Button/Button';
 import {Link} from 'react-router';
 
-const logStuff = () => {
-  console.log("clicked!");
-}
-
 const Header = () => {
   return (
     <div className="header">

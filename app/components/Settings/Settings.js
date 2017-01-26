@@ -24,7 +24,8 @@ export default class Settings extends Component{
           onClick={() => this.props.grabName(this.state.name)}/>
         <Button
           style='reset'
-          name='reset'/>
+          name='reset'
+          onClick={() => this.props.grabName('Chuck Norris')}/>
         <p>Parental Controls:</p>
         ON<input type='radio' name='parental'></input>
         OFF<input type='radio' name='parental' checked></input>
