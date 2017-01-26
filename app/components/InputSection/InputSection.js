@@ -14,7 +14,8 @@ export default class InputSection extends Component{
   }
 
   handleClick(){
-    fetch('http://api.icndb.com/jokes/random/' + this.state.number)
+    console.log(this.props.name[1]);
+    fetch('http://api.icndb.com/jokes/random/' + this.state.number + '?firstName=' + this.props.name[0] + '&lastName=' + this.props.name[1])
       .then((stuff) => stuff.json())
       .then((moreStuff) => this.props.grabJokes(moreStuff.value));
       // .then((moreMoreStuff) => this.setState({joke: moreMoreStuff}));

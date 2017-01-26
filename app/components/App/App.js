@@ -14,7 +14,8 @@ export default class App extends Component{
   }
 
   grabName(name){
-    this.setState({name: name});
+    let array = name.split(' ');
+    this.setState({name: array});
   }
 
   grabJokes(jokes){
@@ -31,6 +32,7 @@ export default class App extends Component{
             grabName: this.grabName,
             grabJokes: this.grabJokes,
             jokes: this.state.jokes,
+            name: this.state.name,
             })}
         </div>
       </section>
