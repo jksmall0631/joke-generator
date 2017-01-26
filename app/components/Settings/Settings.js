@@ -21,7 +21,7 @@ export default class Settings extends Component{
         <Button
           style='set'
           name='set'
-          onClick={() => this.handleClick}/>
+          onClick={() => this.props.grabName(this.state.name)}/>
         <Button
           style='reset'
           name='reset'/>

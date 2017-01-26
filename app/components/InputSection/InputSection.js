@@ -9,7 +9,6 @@ export default class InputSection extends Component{
     super();
     this.state = {
       number: null,
-      jokes: '',
     }
     this.handleClick = this.handleClick.bind(this);
   }
@@ -17,14 +16,14 @@ export default class InputSection extends Component{
   handleClick(){
     fetch('http://api.icndb.com/jokes/random/' + this.state.number)
       .then((stuff) => stuff.json())
-      .then((moreStuff) => this.setState({jokes: moreStuff.value}));
+      .then((moreStuff) => this.props.grabJokes(moreStuff.value));
       // .then((moreMoreStuff) => this.setState({joke: moreMoreStuff}));
   }
 
   render(){
     let children = '';
     if(this.props.children){
-      children = React.cloneElement(this.props.children, {number: this.state.number, jokes: this.state.jokes})
+      children = React.cloneElement(this.props.children, {number: this.state.number, jokes: this.props.jokes})
     }
     return(
       <section>
