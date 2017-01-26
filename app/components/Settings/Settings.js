@@ -6,7 +6,7 @@ export default class Settings extends Component{
   constructor(){
     super();
     this.state = {
-      jokes: '',
+      name: '',
     }
   }
 
@@ -14,10 +14,14 @@ export default class Settings extends Component{
     return(
       <div>
         <p>Set Name:</p>
-        <Input />
+        <Input
+          handleChange={(e) => this.setState({name: e.target.value})}
+          type='text'
+          value={this.state.name}/>
         <Button
           style='set'
-          name='set'/>
+          name='set'
+          onClick={() => this.handleClick}/>
         <Button
           style='reset'
           name='reset'/>

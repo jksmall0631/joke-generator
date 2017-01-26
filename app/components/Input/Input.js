@@ -1,9 +1,9 @@
 import React from 'react';
 
 
-const Input = ({handleChange}) => {
+const Input = ({handleChange, type, value}) => {
   return (
-    <input type='number' onChange={(e) => handleChange(e)}></input>
+    <input type={type} value={value} onChange={(e) => handleChange(e)}></input>
   );
 }
 

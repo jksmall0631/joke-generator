@@ -36,6 +36,7 @@ export default class InputSection extends Component{
         </Link>
         <Input
           handleChange={(e) => this.setState({number: e.target.value})}
+          type='number'
           value={this.state.number}/>
         <Button
           style='favs'
