@@ -26,9 +26,12 @@ export default class InputSection extends Component{
     let children = '';
     if(this.props.children){
       children = React.cloneElement(this.props.children, {number: this.state.number, jokes: this.props.jokes, grabFav: this.props.grabFav, favs: this.props.favs})
+    }else{
+      children = 'Click New Jokes!';
     }
     return(
       <section className='input'>
+        <div className='container'>
         <Link to={'/jokes'}>
           <Button
             style='new-jokes'
@@ -36,9 +39,11 @@ export default class InputSection extends Component{
             onClick={this.handleClick}/>
         </Link>
         <Input
+          style='number'
           handleChange={(e) => this.setState({number: e.target.value})}
           type='number'
           value={this.state.number}/>
+        </div>
         <Link to={'/favs'}>
           <Button
             style='favs'

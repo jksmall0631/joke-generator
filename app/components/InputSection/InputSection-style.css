@@ -1,4 +1,8 @@
 .input{
   text-align: center;
-  margin: 10px;
+  margin: 0 10px;
+}
+
+.container{
+  margin: 10px 0;
 }

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import APIScrubber from '../Helpers/scrubber';
 import Button from '../Button/Button';
 import JokeCard from '../JokeCard/JokeCard';
+import './JokesSection-style';
 
 export default class JokesSection extends Component{
   render(){
@@ -12,7 +13,7 @@ export default class JokesSection extends Component{
         return <JokeCard key={joke.id} info={final} grabFav={this.props.grabFav}/>;
       })
     }else{
-      jokes = 'Click New Jokes';
+      jokes = 'Click New Jokes!';
     }
     return(
       <div className='jokeCard'>
