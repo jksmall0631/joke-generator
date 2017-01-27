@@ -55,3 +55,12 @@ export default class InputSection extends Component{
     )
   }
 }
+
+InputSection.propTypes = {
+  name: React.PropTypes.string,
+  toggleOn: React.PropTypes.bool,
+  children: React.PropTypes.element,
+  jokes: React.PropTypes.string,
+  grabFav: React.PropTypes.func,
+  favs: React.PropTypes.array,
+}

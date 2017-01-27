@@ -12,4 +12,9 @@ const JokeCard = ({info, grabFav}) => {
     )
 }
 
+JokeCard.propTypes = {
+  info: React.PropTypes.string,
+  grabFav: React.PropTypes.func,
+}
+
 export default JokeCard;

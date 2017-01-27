@@ -39,3 +39,9 @@ export default class Settings extends Component{
     )
   }
 }
+
+Settings.propTypes = {
+  grabName: React.PropTypes.func,
+  grabToggleOn: React.PropTypes.func,
+  grabToggleOff: React.PropTypes.func,
+}

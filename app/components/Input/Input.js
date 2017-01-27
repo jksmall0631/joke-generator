@@ -8,4 +8,11 @@ const Input = ({style, handleChange, type, value}) => {
   );
 }
 
+Input.propTypes = {
+  style: React.PropTypes.string,
+  handleChange: React.PropTypes.func,
+  type: React.PropTypes.string,
+  value: React.PropTypes.string,
+}
+
 export default Input;

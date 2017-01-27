@@ -22,3 +22,8 @@ export default class JokesSection extends Component{
     )
   }
 }
+
+JokesSection.propTypes = {
+  jokes: React.PropTypes.string,
+  grabFav: React.PropTypes.func,
+}
