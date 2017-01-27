@@ -8,7 +8,7 @@ export default class InputSection extends Component{
   constructor(){
     super();
     this.state = {
-      number: null,
+      number: '',
     }
     this.handleClick = this.handleClick.bind(this);
   }
@@ -28,7 +28,7 @@ export default class InputSection extends Component{
       children = React.cloneElement(this.props.children, {number: this.state.number, jokes: this.props.jokes, grabFav: this.props.grabFav, favs: this.props.favs})
     }
     return(
-      <section>
+      <section className='input'>
         <Link to={'/jokes'}>
           <Button
             style='new-jokes'

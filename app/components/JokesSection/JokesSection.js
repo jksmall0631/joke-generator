@@ -12,7 +12,7 @@ export default class JokesSection extends Component{
         return <JokeCard key={joke.id} info={final} grabFav={this.props.grabFav}/>;
       })
     }else{
-      jokes = 'Click Get Jokes';
+      jokes = 'Click New Jokes';
     }
     return(
       <div className='jokeCard'>

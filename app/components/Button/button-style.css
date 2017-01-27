@@ -1,4 +1,4 @@
-.settings {
+.settings{
   position: absolute;
   height: 50px;
   width: 50px;
@@ -8,3 +8,27 @@
   border-radius: 50px;
   font-size: 10px;
 }
+
+.new-jokes, .favs{
+  background: rgb(192, 192, 192);
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  width: 150px;
+}
+
+.favs{
+  
+}
+
+.new-jokes:hover, .favs:hover{
+  background: rgb(255, 255, 255);
+}
+
+/*.favs{
+  background: rgb(192, 192, 192);
+}*/
+
+/*.favs:hover{
+  background: rgb(255, 255, 255);
+}*/
