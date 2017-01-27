@@ -9,11 +9,13 @@ export default class App extends Component{
       name: '',
       jokes: null,
       toggleOn: false,
+      favs: [],
     }
     this.grabName = this.grabName.bind(this);
     this.grabJokes = this.grabJokes.bind(this);
     this.grabToggleOn = this.grabToggleOn.bind(this);
     this.grabToggleOff = this.grabToggleOff.bind(this);
+    this.grabFav = this.grabFav.bind(this);
   }
 
   grabName(name){
@@ -26,13 +28,17 @@ export default class App extends Component{
   }
 
   grabToggleOn(){
-    console.log('bla');
     this.setState({toggleOn: true});
   }
 
   grabToggleOff(){
-    console.log('bloo');
     this.setState({toggleOn: false});
+  }
+
+  grabFav(joke){
+    let array = this.state.favs;
+    array.push(joke);
+    this.setState({favs: array});
   }
 
   render(){
@@ -46,9 +52,11 @@ export default class App extends Component{
             grabJokes: this.grabJokes,
             grabToggleOn: this.grabToggleOn,
             grabToggleOff: this.grabToggleOff,
+            grabFav: this.grabFav,
             jokes: this.state.jokes,
             name: this.state.name,
             toggleOn: this.state.toggleOn,
+            favs: this.state.favs,
             })}
         </div>
       </section>
