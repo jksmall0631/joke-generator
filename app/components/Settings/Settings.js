@@ -27,8 +27,8 @@ export default class Settings extends Component{
           name='reset'
           onClick={() => this.props.grabName('Chuck Norris')}/>
         <p>Parental Controls:</p>
-        ON<input type='radio' name='parental'></input>
-        OFF<input type='radio' name='parental' checked></input>
+        ON<input type='radio' name='parental' onChange={() => this.props.grabToggleOn()}></input>
+        OFF<input type='radio' name='parental' onChange={() => this.props.grabToggleOff()} defaultChecked={true}></input>
       </div>
     )
   }

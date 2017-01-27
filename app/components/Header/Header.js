@@ -10,8 +10,7 @@ const Header = () => {
       <Link to={'/settings'}>
         <Button
           style='settings'
-          name='settings'
-          handleClick={() => logStuff()} />
+          name='settings'/>
       </Link>
     </div>
   );

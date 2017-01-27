@@ -8,9 +8,12 @@ export default class App extends Component{
     this.state = {
       name: '',
       jokes: null,
+      toggleOn: false,
     }
     this.grabName = this.grabName.bind(this);
     this.grabJokes = this.grabJokes.bind(this);
+    this.grabToggleOn = this.grabToggleOn.bind(this);
+    this.grabToggleOff = this.grabToggleOff.bind(this);
   }
 
   grabName(name){
@@ -19,20 +22,33 @@ export default class App extends Component{
   }
 
   grabJokes(jokes){
-    this.setState({jokes: jokes})
+    this.setState({jokes: jokes});
+  }
+
+  grabToggleOn(){
+    console.log('bla');
+    this.setState({toggleOn: true});
+  }
+
+  grabToggleOff(){
+    console.log('bloo');
+    this.setState({toggleOn: false});
   }
 
   render(){
     return (
       <section>
-        <Header />
-        <Joke />
+        <Header newName={this.state.name}/>
+        <Joke newName={this.state.name}/>
         <div>
           {React.cloneElement(this.props.children, {
             grabName: this.grabName,
             grabJokes: this.grabJokes,
+            grabToggleOn: this.grabToggleOn,
+            grabToggleOff: this.grabToggleOff,
             jokes: this.state.jokes,
             name: this.state.name,
+            toggleOn: this.state.toggleOn,
             })}
         </div>
       </section>
