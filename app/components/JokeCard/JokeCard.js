@@ -6,7 +6,7 @@ import './JokeCard-style';
 const JokeCard = ({info, grabFav}) => {
     return(
       <div className='joke-card'>
-        {info}<br></br>
+        {info}
         <Button style='star' name='★' onClick={() => grabFav(info)}/>
       </div>
     )

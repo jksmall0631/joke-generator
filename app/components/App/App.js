@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import Header from '../Header/Header';
 import Joke from '../Joke/Joke';
 
+//todo: remove blue borders after button click, change settings button to jokes button, make favs stay,
+//position stars properly, toggle star class on click, testing
+
 export default class App extends Component{
   constructor(){
     super();

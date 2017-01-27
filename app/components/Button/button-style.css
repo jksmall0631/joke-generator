@@ -20,7 +20,9 @@
 }
 
 .favs{
-  display: block;
+  position: absolute;;
+  bottom: 10px;
+  right: 10px;
   margin: auto;
   margin-bottom: 10px;
 }
