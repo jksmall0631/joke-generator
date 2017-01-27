@@ -16,7 +16,7 @@ export default class JokesSection extends Component{
       jokes = 'Click New Jokes!';
     }
     return(
-      <div className='jokeCard'>
+      <div className='joke-section'>
         {jokes}
       </div>
     )

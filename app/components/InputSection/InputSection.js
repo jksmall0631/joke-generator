@@ -50,7 +50,9 @@ export default class InputSection extends Component{
             name='Favorites'
           />
         </Link>
-        {children}
+        <div>
+          {children}
+        </div>
       </section>
     )
   }
