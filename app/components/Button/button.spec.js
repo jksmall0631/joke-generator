@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import { expect, assert } from 'chai';
@@ -14,7 +13,7 @@ describe('<Button />', () => {
 
   it('should call fakeFunction on onClick', () => {
     const fakeFunction = sinon.spy()
-    const wrapper = mount(<Button className='style' onClick={ fakeFunction } />)
+    const wrapper = mount(<Button onClick={ fakeFunction } />)
     assert.equal(fakeFunction.calledOnce, false)
     wrapper.find('button').simulate('click')
     assert.equal(fakeFunction.calledOnce, true)

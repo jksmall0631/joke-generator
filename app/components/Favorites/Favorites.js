@@ -22,5 +22,5 @@ export default class Favorites extends Component{
 }
 
 Favorites.propTypes = {
-  favs: React.PropTypes.string,
+  favs: React.PropTypes.array,
 }

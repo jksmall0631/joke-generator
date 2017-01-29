@@ -11,6 +11,4 @@ describe('<Favorites />', () => {
     const wrapper = shallow(<Favorites />)
     expect(wrapper.find('JokeCard')).to.have.length(1)
   })
-
-
 });

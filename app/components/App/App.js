@@ -35,7 +35,7 @@ export default class App extends Component{
   }
 
   grabToggleOff(){
-    this.setState({toggleOn: false});
+    this.setState({toggleOn: !this.state.toggleOn});
   }
 
   grabFav(joke){

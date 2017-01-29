@@ -18,7 +18,7 @@ export default class Header extends Component{
           <Button
             style='settings'
             name={this.state.switchSettings ? 'jokes' : 'settings'}
-            onClick={() => this.setState({switchSettings: this.state.switchSettings ? false : true})}/>
+            onClick={() => this.setState({switchSettings: !this.state.switchSettings})}/>
         </Link>
       </div>
     );
