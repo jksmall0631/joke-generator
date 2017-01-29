@@ -1,0 +1,29 @@
+.setting{
+ background: rgba(0,0,0,0.2);
+ margin: 10px;
+ text-align: center;
+}
+
+.setting p{
+  display: inline-block;
+  padding: 5px;
+}
+
+.name, .parent{
+  padding: 20px;
+  vertical-align: bottom;
+}
+
+.name input{
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+.name button{
+  margin-left: 5px;
+  border: none;
+  height: 23px;
+  width: 60px;
+  border-radius: 5px;
+}

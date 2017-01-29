@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import APIScrubber from '../Helpers/scrubber';
+import './Joke-style';
 
 export default class Joke extends Component{
   constructor(){
@@ -22,7 +24,7 @@ export default class Joke extends Component{
 
   render(){
     return(
-      <p>{this.state.joke}</p>
+      <p className='joke'>{this.state.joke}</p>
     )
   }
 }

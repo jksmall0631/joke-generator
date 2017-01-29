@@ -1,10 +1,48 @@
-.settings {
+.settings{
   position: absolute;
   height: 50px;
   width: 50px;
-  right: 40px;
-  top: 45px;
+  right: 20px;
+  top: 20px;
   border: none;
   border-radius: 50px;
   font-size: 10px;
 }
+
+.new-jokes, .favs{
+  background: rgb(192, 192, 192);
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  width: 150px;
+  vertical-align: bottom;
+  margin-right: 10px;
+}
+
+.favs{
+  margin: 0 auto 10px;
+}
+
+.star{
+  float: right;
+  font-size: 20px;
+  color: white;
+  background: none;
+  border: none;
+}
+
+.star:hover{
+  color: yellow;
+}
+
+.new-jokes:hover, .favs:hover{
+  background: rgb(255, 255, 255);
+}
+
+/*.favs{
+  background: rgb(192, 192, 192);
+}*/
+
+/*.favs:hover{
+  background: rgb(255, 255, 255);
+}*/

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Input from '../Input/Input';
 import Button from '../Button/Button';
+import './Settings-style';
 
 export default class Settings extends Component{
   constructor(){
@@ -12,23 +13,35 @@ export default class Settings extends Component{
 
   render(){
     return(
-      <div>
-        <p>Set Name:</p>
-        <Input
-          handleChange={(e) => this.setState({name: e.target.value})}
-          type='text'
-          value={this.state.name}/>
-        <Button
-          style='set'
-          name='set'
-          onClick={() => this.handleClick}/>
-        <Button
-          style='reset'
-          name='reset'/>
-        <p>Parental Controls:</p>
-        ON<input type='radio' name='parental'></input>
-        OFF<input type='radio' name='parental' checked></input>
+      <div className='setting'>
+        <div className='name'>
+          <p>Set Name:</p>
+          <Input
+            style='name'
+            handleChange={(e) => this.setState({name: e.target.value})}
+            type='text'
+            value={this.state.name}/>
+          <Button
+            style='set'
+            name='set'
+            onClick={() => this.props.grabName(this.state.name)}/>
+          <Button
+            style='reset'
+            name='reset'
+            onClick={() => this.props.grabName('Chuck Norris')}/>
+        </div>
+        <div className='parent'>
+          <p>Parental Controls:</p>
+          ON<input type='radio' name='parental' onChange={() => this.props.grabToggleOn()}></input>
+          OFF<input type='radio' name='parental' onChange={() => this.props.grabToggleOff()} defaultChecked={true}></input>
+        </div>
       </div>
     )
   }
+}
+
+Settings.propTypes = {
+  grabName: React.PropTypes.func,
+  grabToggleOn: React.PropTypes.func,
+  grabToggleOff: React.PropTypes.func,
 }

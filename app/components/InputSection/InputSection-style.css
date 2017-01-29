@@ -1,4 +1,8 @@
-.link {
-  height: 50px;
-  width: 100px;
+.input{
+  text-align: center;
+  margin: 0 10px;
+}
+
+.container{
+  margin: 10px 0;
 }
